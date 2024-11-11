@@ -7,7 +7,6 @@ fun main() {
     val seconds: Short = 6480
     val partOfYear: Double = 2.0547945205479453E-4
     val apogee: Int = 327000
-
     println("Расстояние, которое пролетел Гагарин пока был в космосе в миллиметрах $length")
     println("Возраст Гагарина на момент полета $age")
     println("Часть дня Гагарин провел в космосе $partOfDay")
