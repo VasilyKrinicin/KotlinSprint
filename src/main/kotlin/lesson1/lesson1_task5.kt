@@ -7,10 +7,5 @@ fun main() {
     val timeHours = (secondsTotalFly / secondInHour)
     val timeMinute = (secondsTotalFly % secondInHour) / secondInMinute
     val timeSeconds = secondsTotalFly % secondInMinute
-    val textTime = String.format("%02d", timeHours) + ":" +
-            String.format("%02d", timeMinute) + ":" +
-            String.format("%02d", timeSeconds)
-    println(
-        "Время полета Гагарина $textTime"
-    )
+    println("Время полета Гагарина ${String.format("%02d:%02d:%02d", timeHours, timeMinute, timeSeconds)}")
 }
