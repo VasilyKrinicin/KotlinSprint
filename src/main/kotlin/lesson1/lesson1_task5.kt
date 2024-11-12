@@ -1,14 +1,16 @@
 package org.example.lesson1
 
 fun main() {
-    val secondsTotal = 6480
-    val timeHours = (secondsTotal / 3600)
-    val timeMinute = (secondsTotal % 3600) / 60
-    val timeSeconds = secondsTotal % 60
-
+    val secondInHour = 3600
+    val secondInMinute = 60
+    val secondsTotalFly = 6480
+    val timeHours = (secondsTotalFly / secondInHour)
+    val timeMinute = (secondsTotalFly % secondInHour) / secondInMinute
+    val timeSeconds = secondsTotalFly % secondInMinute
+    val textTime = String.format("%02d", timeHours) + ":" +
+            String.format("%02d", timeMinute) + ":" +
+            String.format("%02d", timeSeconds)
     println(
-        "Время полета Гагарина ${timeHours.toString().padStart(2, '0')}:${
-            timeMinute.toString().padStart(2, '0')
-        }:${timeSeconds.toString().padStart(2, '0')}"
+        "Время полета Гагарина $textTime"
     )
 }
